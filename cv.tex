@@ -1,0 +1,202 @@
+% !TeX program = xelatex
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{marvosym}
+\usepackage{fontspec}
+\usepackage{xunicode,xltxtra,url,parskip}
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{fullpage}
+\usepackage[margin=2cm]{geometry}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\usepackage{svg}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{blindtext}
+
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+\graphicspath{ {images/} }
+
+% Fonts
+\defaultfontfeatures{Mapping=tex-text}
+\IfFileExists{fonts/Fontin.otf}{
+  \setmainfont[
+    Path = fonts/,
+    SmallCapsFont = Fontin-SmallCaps.otf,
+    BoldFont = Fontin-Bold.otf,
+    ItalicFont = Fontin-Italic.otf,
+    Extension = .otf
+  ]{Fontin}
+}{
+  % Fallback if fonts aren't found
+  \setmainfont{Latin Modern Roman}
+}
+%%%
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{5pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\hyphenation{im-pre-se}
+
+%--------------------BEGIN DOCUMENT----------------------
+
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+\font\fb=''[cmr10]''
+
+%--------------------TITLE-------------
+\par{\centering
+		{\huge Amadeus \textsc{Magrabi}, PhD \\[5mm]
+	}\par}
+
+
+%--------------------SECTIONS-----------------------------------
+
+% Section: Personal Data
+% \section{Personal Data}
+
+\begin{tabular}{rl}
+  \textsc{Contact:}     & \small \href{mailto:<email-placeholder>}{<email-placeholder>} \space | \space  <phone-placeholder> | \space \href{https://amadeusmagrabi.com}{amadeusmagrabi.com} \\
+  % \textsc{Location:}   & \small Berlin, Germany \\
+    \textsc{social media:}     
+        & \small 
+        \raisebox{-0.2\height}{\includegraphics[width=3.5mm]{images/linkedin.pdf}} \href{https://www.linkedin.com/in/amadeusmagrabi/}{amadeus.magrabi} \space | \space
+        \raisebox{-0.2\height}{\includegraphics[width=3.5mm]{images/github.pdf}} \href{https://github.com/amagrabi}{amagrabi} \space | \space
+        \raisebox{-0.2\height}{\includegraphics[width=3.5mm]{images/twitter.pdf}} \href{https://twitter.com/AmadeusMagrabi/}{@AmadeusMagrabi} \space | \space
+        \raisebox{-0.2\height}{\includegraphics[width=3.5mm]{images/medium.pdf}} \href{https://medium.com/@amadeus.magrabi}{amadeus.magrabi} \space
+        \\[1mm]
+\end{tabular}
+
+% Summary
+\vspace{1mm}
+\parbox{\linewidth}{\small % Use \small or keep default font size
+AI \& ML engineer with 9+ years of experience leading projects from research to scalable production systems. 
+Skilled in Python, MLOps, LLM applications and technical leadership, with an academic background in decision neuroscience.
+Passionate about impact-driven, autonomous teams that value pragmatism and learning from mistakes.
+Remained actively involved in hands-on coding and engineering throughout leadership roles.
+
+}
+\vspace{1mm}
+
+% Section: Work Experience
+\section{Work Experience}
+
+\begin{tabular}{r|p{14.5cm}}
+
+ \textsc{Dec 2021} & 
+ \textbf{Head of AI \& Data Science} \\ 
+ \textsc{- Sep 2024} & 
+ \emph{\href{https://buildingminds.com/}{BuildingMinds}}, Berlin \\[-1.5mm]
+ & \small\begin{itemize}[leftmargin=1em, itemsep=0.5mm, parsep=0mm]
+   \item Implemented ML solutions for a data platform to improve sustainability and digitalization in the real estate industry.
+   \item Built a recommendation engine for building retrofits, identifying opportunities that averaged a 15\% reduction in carbon emissions and frequently projected savings over €5 million.
+   \item Designed an ML-based information extraction pipeline, which reduced data onboarding time for documents (energy certificates, invoices) by ~70\% and saved 20+ hours of manual work per week.
+   \item Developed a user-facing LLM chatbot with RAG that made customer support on the platform faster.
+   \item Transformed a research-focused team into a self-sufficient engineering unit capable of independently developing, deploying, and maintaining ML features in production.
+   \item Set up processes to improve developer productivity and code quality
+    {\scriptsize (improved code consistency with linters and pre-commit hooks, reduced build times, extended test coverage, organized knowledge sharing sessions/conference visits, etc.)}.
+   \item Main tech stack: \textsc{Azure}, \textsc{MLflow}, \textsc{Scikit-Learn}, \textsc{LlamaIndex}, \textsc{FastAPI}, \textsc{SQL}, \textsc{Docker}, \textsc{Kubernetes}.
+   \end{itemize} \\
+   \multicolumn{2}{c}{} \\
+
+ \textsc{Oct 2016} & 
+ \textbf{Lead Data Scientist} \\ 
+%  {\scriptsize (promoted from Data Scientist in 2018)}
+ \textsc{- Dec 2020} & 
+ \emph{\href{https://commercetools.com/}{Commercetools}}, Berlin \\[-1.5mm]
+ & \small\begin{itemize}[leftmargin=1em, itemsep=0.5mm, parsep=0mm]
+   \item Developed ML APIs for a cloud-based \href{https://docs.commercetools.com}{commerce platform}.
+   \item Started as first ML hire and built up the \href{https://techblog.commercetools.com/building-up-a-data-science-team-from-scratch-7a7b24ba9f2d}{ML team} (8 members) and data analytics team (3 members) from scratch.
+   \item Developed a tool for \href{https://techblog.commercetools.com/boosting-product-categorization-with-machine-learning-ad4dbd30b0e8}{categorizing products} based on images, descriptions, and attributes, enabling customers to publish new products faster.
+   \item Built a \href{https://medium.com/@Evi.lazaridou/improving-data-quality-with-product-similarity-search-d037c7212071}{near-duplicate detection system} that improved data quality and reduced manual review time.
+   \item Led development of a feature that allowed customers to \href{https://medium.com/@mnalavadi/reverse-image-search-with-machine-learning-92786a07c142}{search for products by images}.
+   \item Implemented an internal recommendation engine to predict optimal database indexes from large volume of MongoDB query data, which reduced database load and query execution time.
+   \item Gave talks at international data science conferences and wrote technical \href{https://medium.com/@amadeus.magrabi}{blog posts}.
+   \item Main tech stack: \textsc{GCP}, \textsc{Tensorflow}, \textsc{Pandas}, \textsc{Flask}, \textsc{BigQuery}, \textsc{Docker}, \textsc{Kubernetes}.
+   \end{itemize} \\
+   \multicolumn{2}{c}{} \\
+
+ \textsc{Oct 2012} & \textbf{Doctoral Researcher} \\
+ \textsc{- Oct 2016} & \emph{\href{https://mindandbrain.charite.de/en}{Charité}}, Berlin \\[-1.5mm]
+ & \small\begin{itemize}[leftmargin=1em, itemsep=0.5mm, parsep=0mm]
+   \item Conducted empirical research on brain mechanisms responsible for human decision-making.
+   \item Applied machine learning and statistical modeling to decode patterns in MRI images.
+   \item Published papers in leading peer-reviewed journals (\href{https://doi.org/10.1093/scan/nsab125}{1}, \href{ https://doi.org/10.1111/acer.14812}{2}, \href{https://doi.org/10.1093/scan/nst110}{3}, \href{https://doi.org/10.1093/scan/nsw036}{4}).
+   \item Awarded with stipend from \href{https://www.dfg.de/en/research_funding/programmes/excellence_initiative/index.html}{Excellence Initiative} of the \href{https://www.dfg.de/en}{German Research Foundation}.
+   \end{itemize} \\
+   \multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+% Section: Education
+\section{Education}
+
+\begin{tabular}{r|p{13cm}}
+
+  \textsc{Oct 2006} & \textbf{MSc and BSc} in \textsc{Cognitive Science} \\[0.5mm]
+  \textsc{- May 2012} &\textit{\href{https://www.ikw.uni-osnabrueck.de/en}{University of Osnabrück}} \\[0.1mm]
+& \small{Interdisciplinary degree in machine learning, computer science, statistics and neuroscience.} \\[0.1mm]
+& \small{Grade A/A (German grade: 1.1/1.0)} \\[0.1mm]
+% & \small{Awarded with \emph{Stipend of Lower Saxony for Excellent Achievements}.} \\[0.1mm]
+ \multicolumn{2}{c}{} \\
+
+  \textsc{Jul 2008} & \textbf{Exchange Semester} \\[0.5mm]
+  \textsc{- Dec 2008} &\textit{\href{https://www.mq.edu.au/}{Macquarie University}, Sydney} \\[0.1mm]
+& \small{Training in data modeling, statistics and experimental design.} \\[0.1mm]
+
+\end{tabular}
+
+% Section: Skills
+\section{Skills and Achievements}
+
+\hspace*{-0.5cm}\begin{tabular}{rl}
+
+ Programming Languages: & \small \textsc{Python} (main), \textsc{R}, \textsc{Matlab}, \textsc{Java} (basics) \\[0.5mm]
+ Favorite Python Libraries: & \small \textsc{FastAPI}, \textsc{Flask}, \textsc{Ruff}, \textsc{Pandas} \\[0.5mm]
+ Favorite ML Frameworks: & \small \textsc{MLflow}, \textsc{PyTorch}, \textsc{Scikit-Learn}, \textsc{LlamaIndex} \\[0.5mm]
+ Infrastructure Tools: & \small \textsc{Docker}, \textsc{Kubernetes}, \textsc{Prometheus}, \textsc{Grafana}, \textsc{Git}, \textsc{UV} \\[0.5mm]
+ Cloud Platforms: & \small \textsc{Azure} (most recent), \textsc{GCP}, \textsc{AWS}, \textsc{Heroku} \\[0.5mm]
+ Databases: & \small \textsc{PostgreSQL}, \textsc{Redis}, \textsc{MongoDB} \\[0.5mm]
+ Side Projects: & \small \href{https://argumentorai.com}{ArguMentorAI.com} - a platform to train logical reasoning skills with AI-driven feedback \\[0.5mm]
+ Conference Talks: & \small \href{https://worlddatasummit.com/}{World Data Summit} (Amsterdam, 2024) \\
+ & \small \href{https://odsc.com}{Open Data Science Conference} (San Francisco 2017, Boston 2020) \\
+ & \small \href{https://www.datasciconference.com/}{Data Science Conference} (Belgrade, 2019) \\
+ & \small \href{https://datanatives.io}{Data Natives} (Berlin, 2018) \\[0.5mm]
+Blog Posts: & \small \href{https://medium.com/data-science/what-separates-good-from-great-data-scientists-2906431455fd}{Hierarchy of ML Skills} (2019) \\
+  & \small \href{https://techblog.commercetools.com/building-up-a-data-science-team-from-scratch-7a7b24ba9f2d}{Building up ML Teams in Startups} (2019) \\
+  & \small \href{https://techblog.commercetools.com/top-5-machine-learning-applications-for-e-commerce-268eb1c89607}{ML for Commerce} (2017) \\[1mm]
+% Hackathons: & \small Developed app that diagnoses skin cancer from images (\textit{SAP Health Analytics Prize}, 2016). \\[0.5mm]
+% Leadership: & \small Coached by professional leadership trainers, lead role since 2018 \\[0.5mm]
+ Certificates: & \small \href{https://digitalcredential.stanford.edu/check/39630025A12C2EB7C4949C5B5DB1DDC7D0DFF92B2D09C7D43679B83124771827QmZ2c3BqZEhvVFBUV29FOGRRWE11Uy9YWm91TjkydDFuRjVWY0ZPU1JjZnBhMHJI}{Managing Remote and Hybrid Teams} (Stanford Online, 2023) \\[0.5mm]
+ Languages: & \small German (native), English (fluent) \\[0.5mm]
+ Other Interests: & \small Chess, Snowboarding, Piano, Calisthenics, Traveling
+ \\[4mm]
+ 
+\end{tabular}
+
+
+% Section: Publications
+% \section{Selected Publications}
+
+% \begin{list}{}{
+%   \setlength{\leftmargin}{1cm}
+%   \setlength{\itemindent}{-1cm}
+%    }
+  
+%   \item \textbf{Magrabi, A.}, Ludwig, V.U., Stoppel, C.M., Paschke, L.M., Wisniewski, D., Heekeren, H., \& Walter, H. (2022). Dynamic Computation of Value Signals via a Common Neural Network in Multi-Attribute Decision-Making. \textsc{Social, Cognitive and Affective Neuroscience}, 17(7), 683–93. \href{http://doi.org/10.1093/scan/nsab125}{http://doi.org/10.1093/scan/nsab125}
+
+%   \item \textbf{Magrabi, A.}, Beck, A., Schad, D.J., Stoppel, C.M, Lett, T.A., Charlet, K., Kiefer, F., Heinz, A., \& Walter, H. (2022). Alcohol Dependence decreases Functional Activation of the Caudate Nucleus during Model-Based Decision Processes. \textsc{Alcoholism: Clinical and Experimental Research}, 46(5), 749–58. \href{http://doi.org/10.1111/acer.14812}{http://doi.org/10.1111/acer.14812}
+
+%   \item Paschke, L.M., Dörfel, D., Steimke, R., Trempler, I., \textbf{Magrabi, A.}, Ludwig, V.U., Schubert, S., Stelzel, C., \& Walter, H. (2016). Individual Differences in Self-Reported Self-Control Predict Successful Emotion Regulation. \textsc{Social Cognitive and Affective Neuroscience}, 11 (8), 1193–1204. \href{https://doi.org/10.1093/scan/nsw036}{https://doi.org/10.1093/scan/nsw036}
+  
+%   \item Ludwig, V.U., Stelzel, C., Krutiak, H., \textbf{Magrabi, A.}, Steimke, R., Paschke, L.M., Kathmann, N., \& Walter, H. (2014). The Suggestible Brain: Posthypnotic Effects on Value-Based Decision-Making. \textsc{Social Cognitive and Affective Neuroscience}, 9(9), 1281–1288. \href{https://doi.org/10.1093/scan/nst110}{https://doi.org/10.1093/scan/nst110}
+  
+% \end{list}
+
+\end{document}
