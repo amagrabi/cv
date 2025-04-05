@@ -1,0 +1,222 @@
+% !TeX program = xelatex
+\documentclass[a4paper,9.5pt]{article}
+
+\usepackage{marvosym}
+\usepackage{fontspec}
+\usepackage{xunicode,xltxtra,url,parskip}
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{fullpage}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\usepackage{svg}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{blindtext}
+
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+\graphicspath{ {images/} }
+
+% Fonts
+\defaultfontfeatures{Mapping=tex-text}
+\IfFileExists{fonts/Fontin.otf}{
+  \setmainfont[
+    Path = fonts/,
+    SmallCapsFont = Fontin-SmallCaps.otf,
+    BoldFont = Fontin-Bold.otf,
+    ItalicFont = Fontin-Italic.otf,
+    Extension = .otf
+  ]{Fontin}
+}{
+  % Fallback if fonts aren't found
+  \setmainfont{Latin Modern Roman}
+}
+%%%
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\hyphenation{im-pre-se}
+
+%--------------------BEGIN DOCUMENT----------------------
+
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+\font\fb=''[cmr10]''
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Large Amadeus \textsc{Magrabi}, PhD \\[5mm]
+	}\par}
+
+
+%--------------------HEADER SECTION-----------------------------------
+\begin{center}
+  \textsc{Contact:} \small \href{mailto:<email-placeholder>}{<email-placeholder>} \space | \space  <phone-placeholder> | \space \href{https://amadeusmagrabi.com}{amadeusmagrabi.com}\\
+\vspace{1mm}
+\textsc{Social Media:} \small 
+\raisebox{-0.2\height}{\includegraphics[width=3.5mm]{images/linkedin.pdf}} \href{https://www.linkedin.com/in/amadeusmagrabi/}{amadeus.magrabi} \space | \space
+\raisebox{-0.2\height}{\includegraphics[width=3.5mm]{images/github.pdf}} \href{https://github.com/amagrabi}{amagrabi} \space | \space
+\raisebox{-0.2\height}{\includegraphics[width=3.5mm]{images/twitter.pdf}} \href{https://twitter.com/AmadeusMagrabi/}{AmadeusMagrabi} \space | \space
+\raisebox{-0.2\height}{\includegraphics[width=3.5mm]{images/medium.pdf}} \href{https://medium.com/@amadeus.magrabi}{amadeus.magrabi}
+\end{center}
+
+% Summary
+\vspace{1mm}
+\parbox{\linewidth}{\small 
+AI \& ML engineer with 9+ years of experience leading projects from research to scalable production systems. 
+Skilled in Python, MLOps, LLM applications and technical leadership, with an academic background in decision neuroscience.
+Passionate about impact-driven, autonomous teams that value pragmatism and learning from mistakes.
+Remained actively involved in hands-on coding and engineering throughout leadership roles.
+}
+
+%--------------------TWO-COLUMN SECTION-----------------------------------
+\vspace{3mm}
+\noindent
+\begin{minipage}[t]{0.32\textwidth}
+% LEFT COLUMN
+
+% Skills Section
+\section{Skills}
+\small
+
+\vspace{1.5mm}
+\textbf{Programming Languages}\\
+\textsc{Python} (main), \textsc{R}, \textsc{C++}, \textsc{Java} (basics)
+\vspace{1.5mm}
+
+\textbf{Python Libraries}\\
+\textsc{FastAPI}, \textsc{Flask}, \textsc{Pandas}, \textsc{Airflow}, \textsc{Ruff}
+\vspace{1.5mm}
+
+\textbf{ML Frameworks}\\
+\textsc{MLflow}, \textsc{Scikit-Learn}, \textsc{PyTorch}, \textsc{Keras}
+\vspace{1.5mm}
+
+\textbf{Infrastructure}\\
+\textsc{Docker}, \textsc{Kubernetes}, \textsc{CI/CD}, \textsc{Prometheus}, \textsc{Grafana}, \textsc{Git}, \textsc{UV}
+\vspace{1.5mm}
+
+\textbf{Cloud}\\
+\textsc{Azure} (most recent), \textsc{GCP}, \textsc{AWS} (basics)
+\vspace{1.5mm}
+
+\textbf{Databases}\\
+\textsc{PostgreSQL}, \textsc{Redis}, \textsc{MongoDB}
+\vspace{1.5mm}
+
+\textbf{Languages}\\
+German (native), English (fluent)
+\vspace{3mm}
+
+% Education Section
+\section{Education}
+\small
+\vspace{1.5mm}
+
+\textbf{MSc and BSc in Cognitive Science}\\
+\textsc{Oct 2006 - May 2012}\\
+\textit{\href{https://www.ikw.uni-osnabrueck.de/en}{University of Osnabrück}}\\
+Interdisciplinary degree in ML, computer science, statistics and neuroscience.\\
+Grade: A (MSc), A (BSc)
+\vspace{3mm}
+
+\textbf{Exchange Semester}\\
+\textsc{Jul 2008 - Dec 2008}\\
+\textit{\href{https://www.mq.edu.au/}{Macquarie University}}, Sydney\\
+Training in data modeling, statistics and experimental design.
+\vspace{4mm}
+
+% Contributions Section
+\section{Contributions}
+\small
+\vspace{1.5mm}
+\textbf{Side Projects}\\
+\href{https://argumentorai.com}{ArguMentorAI.com} - a platform to train reasoning skills with AI-driven feedback
+\vspace{2mm}
+
+\textbf{Conference Talks}\\
+\href{https://worlddatasummit.com/}{World Data Summit} (Amsterdam, 2024)\\
+\href{https://odsc.com}{ODSC} (San Francisco 2017, Boston 2020)\\
+\href{https://www.datasciconference.com/}{Data Science Conference} (Belgrade, 2019)\\
+\href{https://datanatives.io}{Data Natives} (Berlin, 2018)
+\vspace{2mm}
+
+\textbf{Blog Posts}\\
+\href{https://medium.com/data-science/what-separates-good-from-great-data-scientists-2906431455fd}{Hierarchy of ML Skills} (2019)\\
+\href{https://techblog.commercetools.com/building-up-a-data-science-team-from-scratch-7a7b24ba9f2d}{Building ML Teams in Startups} (2019)\\
+\href{https://techblog.commercetools.com/top-5-machine-learning-applications-for-e-commerce-268eb1c89607}{ML for Commerce} (2017)
+\vspace{2mm}
+
+\textbf{Publications}\\
+Decision Neuroscience: \href{https://doi.org/10.1093/scan/nsab125}{1}, \href{ https://doi.org/10.1111/acer.14812}{2}, \href{https://doi.org/10.1093/scan/nst110}{3}, \href{https://doi.org/10.1093/scan/nsw036}{4}
+\vspace{2mm}
+
+% \textbf{Certificates}\\
+% \href{https://digitalcredential.stanford.edu/check/39630025A12C2EB7C4949C5B5DB1DDC7D0DFF92B2D09C7D43679B83124771827QmZ2c3BqZEhvVFBUV29FOGRRWE11Uy9YWm91TjkydDFuRjVWY0ZPU1JjZnBhMHJI}{Managing Remote and Hybrid Teams} (Stanford Online, 2023)
+% \vspace{2mm}
+
+\textbf{Other Interests}\\
+Chess, Snowboarding, Piano, Calisthenics, Traveling
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.65\textwidth}
+% RIGHT COLUMN
+
+% Work Experience
+\section{Work Experience}
+
+\small
+\vspace{1.5mm}
+\textbf{Head of AI \& Data Science}\\
+\textsc{Dec 2021 - Sep 2024}\\
+\emph{\href{https://buildingminds.com/}{BuildingMinds}}, Berlin
+\vspace{2.5mm}
+\begin{itemize}[leftmargin=1em, itemsep=1mm, parsep=0.5mm]
+  \item Implemented ML solutions for a data platform to improve sustainability and digitalization in the real estate industry.
+  \item Built a recommendation engine for building retrofits, identifying opportunities that averaged a 15\% reduction in carbon emissions and projected savings over \$3 million.
+  \item Created an ML-based information extraction pipeline, which reduced data onboarding time for documents (energy certificates, invoices) and saved 20+ hours of manual work per week.
+  \item Developed a user-facing LLM chatbot with RAG that made customer support on the platform faster.
+  \item Transformed a research-focused team into an autonomous engineering unit capable of independently developing, deploying, and maintaining ML features in production.
+  \item Set up processes to improve developer productivity and code quality (improved code consistency with linters and pre-commit hooks, reduced build times, extended test coverage, organized knowledge sharing sessions, etc.).
+  \item Main tech stack: \textsc{Azure}, \textsc{MLflow}, \textsc{Scikit-Learn}, \textsc{LlamaIndex}, \textsc{FastAPI}, \textsc{SQL}, \textsc{Docker}, \textsc{Kubernetes}.
+\end{itemize}
+\vspace{2mm}
+
+\textbf{Lead Data Scientist}\\
+\textsc{Oct 2016 - Dec 2020}\\
+\emph{\href{https://commercetools.com/}{Commercetools}}, Berlin
+\vspace{1mm}
+\begin{itemize}[leftmargin=1em, itemsep=1mm, parsep=0.5mm]
+  \item Developed ML APIs for a cloud-based \href{https://docs.commercetools.com}{commerce platform}.
+  \item Started as first ML hire and built up the \href{https://techblog.commercetools.com/building-up-a-data-science-team-from-scratch-7a7b24ba9f2d}{ML team} (8 members) and data analytics team (3 members) from scratch.
+  \item Developed a tool for \href{https://techblog.commercetools.com/boosting-product-categorization-with-machine-learning-ad4dbd30b0e8}{automatically categorizing products} based on images, descriptions, and attributes, enabling customers to publish new products faster.
+  \item Built a \href{https://medium.com/@Evi.lazaridou/improving-data-quality-with-product-similarity-search-d037c7212071}{near-duplicate detection system} that improved data quality and reduced manual review time.
+  \item Led development of a feature that allowed customers to \href{https://medium.com/@mnalavadi/reverse-image-search-with-machine-learning-92786a07c142}{search for products by images}.
+  \item Implemented an internal recommendation engine to predict optimal database indexes from large volume of MongoDB query data, which reduced database load and query execution time.
+  \item Gave talks at international conferences and wrote technical \href{https://medium.com/@amadeus.magrabi}{blog posts}.
+  \item Main tech stack: \textsc{GCP}, \textsc{Tensorflow}, \textsc{Pandas}, \textsc{Flask}, \textsc{BigQuery}, \textsc{Docker}, \textsc{Kubernetes}.
+\end{itemize}
+\vspace{2mm}
+
+\textbf{Doctoral Researcher}\\
+\textsc{Oct 2012 - Oct 2016}\\
+\emph{\href{https://mindandbrain.charite.de/en}{Charité}}, Berlin
+\vspace{1mm}
+\begin{itemize}[leftmargin=1em, itemsep=1mm, parsep=0.5mm]
+  \item Conducted empirical research on brain mechanisms underlying human decision-making at the largest university hospital in Europe.
+  \item Applied ML and statistical modeling to decode patterns in MRI images.
+  \item Published papers in leading peer-reviewed journals. % (\href{https://doi.org/10.1093/scan/nsab125}{1}, \href{ https://doi.org/10.1111/acer.14812}{2}, \href{https://doi.org/10.1093/scan/nst110}{3}, \href{https://doi.org/10.1093/scan/nsw036}{4}).
+  \item Awarded with stipend of the \textit{German Research Foundation} (\href{https://www.dfg.de/en/research_funding/programmes/excellence_initiative/index.html}{Excellence Initiative}).
+\end{itemize}
+
+\end{minipage}
+
+\end{document}
