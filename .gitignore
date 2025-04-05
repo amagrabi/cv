@@ -317,4 +317,4 @@ __pycache__/
 .env
 
 # Special files
-cv.pdf
+*.pdf
